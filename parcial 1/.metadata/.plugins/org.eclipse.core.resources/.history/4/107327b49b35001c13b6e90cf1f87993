@@ -1,0 +1,21 @@
+//amarilla juan sebastian 1C
+
+#include "Localidad.h"
+
+int inicializarLocalidad(eCliente listaCliente[], int tam)
+{
+	int i;
+	int retorno;
+
+	retorno = -1;
+
+	for(i=0;i<tam;i++)
+	{
+		listaCliente[i].isEmpty = VACIO;
+		listaCliente[i].contadorPendiente = 0;
+		listaCliente[i].contadorProcesado = 0;
+		retorno = 1;
+	}
+
+	return retorno;
+}

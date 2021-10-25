@@ -1043,3 +1043,36 @@ gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o"
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
 gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:54:23 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:55:10 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:55:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+Info: Nothing to build for examen 1
+10:58:25 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:59:26 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:59:54 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 

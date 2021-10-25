@@ -13,6 +13,7 @@ int inicializarClientes(eCliente listaCliente[], int tam)
 	{
 		listaCliente[i].isEmpty = VACIO;
 		listaCliente[i].contadorPendiente = 0;
+		listaCliente[i].contadorProcesado = 0;
 		retorno = 1;
 	}
 
@@ -64,6 +65,7 @@ int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad
 	for(i=0;i<tamClien;i++)
 	{
 		retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, listaCliente, cadena, id);
+		break;
 
 	}
 
@@ -81,7 +83,7 @@ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int ta
 	{
 		retorno = 0;
 
-		if(buscarLibre(listaCliente.isEmpty) == OCUPADO)
+		if(buscarLibre(listaCliente.isEmpty) != OCUPADO)
 		{
 			pedirCliente(listaCliente, listaLocalidad[i], cadena, id, lista);
 			retorno = 1;

@@ -45,6 +45,16 @@ void verificarNombre(char cadena[], eCliente listaCliente[]);
 /// @return retorna 1 si salio bien o -1 si salio mal
 int inicializarClientes(eCliente listaCliente[], int tam);
 
+/// @fn int altaCliente(eCliente[], int, eLocalidad[], int, char[], int)
+/// @brief su funcion es dar de alta
+///
+/// @param eCliente listaCliente[]
+/// @param int tamClien
+/// @param eLocalidad listaLocalidad[]
+/// @param tamLocal
+/// @param cadena
+/// @param id
+/// @return
 int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
 
 int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, eCliente lista[], char cadena[], int id);

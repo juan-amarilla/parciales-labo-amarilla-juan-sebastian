@@ -79,9 +79,12 @@ int main(void)
 			                                {2,1,"br","12-12345678-2","calle brasil","avellaneda",OCUPADO},
 			                                {3,0,"ark","32-12345678-2","calle brasil","avellaneda",OCUPADO}};*/
 
-	ePedido listaPedido[TAM_PEDIDO]; /*= {{1,1,100,0,0,0,PENDIENTE},
-			                          {2,1,300,0,0,0,PENDIENTE},
-	                                  {3,2,100,0,0,0,PENDIENTE}};*/
+	ePedido listaPedido[TAM_PEDIDO]; /*= {{1,1,0,0,0,0,VACIO},
+			                          {2,1,0,0,0,0,VACIO},
+	                                  {3,2,0,0,0,0,VACIO}};*/
+
+	eLocalidad listaLocalidad[TAM_CLIENTE];
+
 	eAuxiliar auxiliar;
 
     setbuf(stdout, NULL);
@@ -95,6 +98,9 @@ int main(void)
     retorno = inicializarPedidos(listaPedido, TAM_PEDIDO);
     mensajeEstado(retorno, "Inicializacion de pedidos con exito. \n\n", "Error, un proceso salio mal. \n\n", "Inicializacion de pedidos sin exito. \n\n");
 
+    retorno = inicializarLocalidad(listaCliente, TAM_CLIENTE);
+    mensajeEstado(retorno, "Inicializacion de clientes con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de clientes sin exito. \n");
+
     do
     {
     	menu();
@@ -104,27 +110,23 @@ int main(void)
     	{
 
     	  case 1:
-    	  //bien
     	  auxiliar.idCliente++;
-    	  retorno = altaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+    	  retorno = altaCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
     	  mensajeEstado(retorno, "Alta con exito. \n", "Error, un proceso salio mal. \n", "Alta sin exito. \n");
     	  auxiliar.idCliente = verificarId(retorno, auxiliar.idCliente);
     	  break;
 
     	  case 2:
-    	  //bien
-    	  retorno = modificarCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar);
+    	  retorno = modificarCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar);
     	  mensajeEstado(retorno, "Modificacion con exito. \n", "Error, un proceso salio mal. \n", "Modificacion sin exito. \n");
     	  break;
 
     	  case 3:
-    	  //bien
     	  retorno = bajaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar);
     	  mensajeEstado(retorno, "Baja con exito. \n", "Error, un proceso salio mal. \n", "Baja sin exito. \n");
     	  break;
 
     	  case 4:
-    	  //bien
     	  auxiliar.idPedido++;
     	  retorno = crearPedido(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE, auxiliar.idPedido);
     	  mensajeEstado(retorno, "Creacion con exito. \n", "Error, un proceso salio mal. \n", "Creacion sin exito. \n");
@@ -132,42 +134,51 @@ int main(void)
     	  break;
 
     	  case 5:
-    	  //revision
     	  retorno = procesarResiduos(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE);
     	  mensajeEstado(retorno, "Procesamiento con exito. \n", "Error, un proceso salio mal. \n", "Procesamiento sin exito. \n");
     	  break;
 
     	  case 6:
-    	  //bien
-    	  retorno = mostrarClientes(listaCliente, TAM_CLIENTE);
+    	  retorno = mostrarClientes(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE);
     	  mensajeEstado(retorno, "listado con exito. \n", "Error, un proceso salio mal. \n", "listado sin exito. \n");
     	  break;
 
     	  case 7:
-    	  //bien
     	  retorno = mostrarPedidos(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE);
     	  mensajeEstado(retorno, "listado con exito. \n", "Error, un proceso salio mal. \n", "listado sin exito. \n");
     	  break;
 
     	  case 8:
-    	  //bien
     	  retorno = mostrarPedidosProcesados(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE);
     	  mensajeEstado(retorno, "listado con exito. \n", "Error, un proceso salio mal. \n", "listado sin exito. \n");
     	  break;
 
     	  case 9:
-    	  //bien
-    	  retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE);
+    	  retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE);
 		  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 10:
-    	  //bien
-    	  retorno = sacarPromedioDePP(listaPedido, TAM_PEDIDO);
+    	  retorno = sacarPromedioDePP(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE);
     	  mensajeEstado(retorno, "Promedio con exito. \n", "Error, un proceso salio mal. \n", "Promedio sin exito. \n");
     	  break;
 
     	  case 11:
+    	  retorno = pedidosPendiente(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
+    	  break;
+
+    	  case 12:
+    	  retorno = pedidosCompletados(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
+    	  break;
+
+    	  case 13:
+    	  retorno = pedidos(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
+    	  break;
+
+    	  case 14:
           retorno = 1;
     	  mensajeEstado(retorno, "Gracias por usar mi programa. \n", "Error, un proceso salio mal. \n", "Opcion no valida. \n");
     	  break;
@@ -179,7 +190,7 @@ int main(void)
 
     	}
 
-    } while (opcion != 11);
+    } while (opcion != 14);
 
 	return 0;
 }

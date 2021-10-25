@@ -11,7 +11,9 @@ int inicializarLocalidad(eLocalidad listaLocalidad[], int tam)
 
 	for(i=0;i<tam;i++)
 	{
-		listaLocalidad[i].isEmpty = VACIO;
+		listaCliente[i].isEmpty = VACIO;
+		listaCliente[i].contadorPendiente = 0;
+		listaCliente[i].contadorProcesado = 0;
 		retorno = 1;
 	}
 
