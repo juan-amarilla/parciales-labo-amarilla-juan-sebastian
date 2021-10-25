@@ -99,7 +99,7 @@ int main(void)
     mensajeEstado(retorno, "Inicializacion de pedidos con exito. \n\n", "Error, un proceso salio mal. \n\n", "Inicializacion de pedidos sin exito. \n\n");
 
     retorno = inicializarLocalidad(listaLocalidad, TAM_CLIENTE);
-    mensajeEstado(retorno, "Inicializacion de localidades con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de clientes sin exito. \n");
+    mensajeEstado(retorno, "Inicializacion de localidades con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de localidades sin exito. \n");
 
     do
     {
