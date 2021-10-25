@@ -1,0 +1,40 @@
+//amarilla juan sebastian 1C
+
+#include "OtrasFunciones.h"
+
+void mensajeEstado(int estado, char mensaje[], char error[])
+{
+	if(estado == 1)
+	{
+	  printf("%s", mensaje);
+	}
+
+	else
+	{
+		if(estado == 0)
+		{
+			printf("%s", error);
+		}
+
+		else
+		{
+			printf("%s", error);
+		}
+	}
+}
+
+void menu()
+{
+   printf("1-Alta de cliente.\n");
+   printf("2-Modificar datos de cliente.\n");
+   printf("3-Baja de cliente.\n");
+   printf("4-Crear pedido de recolección. \n");
+   printf("5-Procesar residuos.\n");
+   printf("6-. \n");
+   printf("7-. \n");
+   printf("8-. \n");
+   printf("9-. \n");
+   printf("10-. \n");
+   printf("11-Salir. \n");
+
+}

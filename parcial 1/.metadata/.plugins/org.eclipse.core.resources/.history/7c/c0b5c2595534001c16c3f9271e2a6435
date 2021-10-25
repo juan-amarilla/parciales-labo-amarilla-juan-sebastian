@@ -1,0 +1,22 @@
+//amarilla juan sebastian 1C
+
+#include "NexoInformes.h"
+
+void mostrarCliente(eCliente unCliente)
+{
+	 printf("%5d  %12s %17s %20s %20s %20d \n\n", unCliente.id,
+			                                      unCliente.nombre,
+												  unCliente.cuit,
+												  unCliente.direccion,
+												  unCliente.localidad,
+												  unCliente.contadorPendiente);
+
+}
+
+void mostrarPedido(ePedido unPedido, eCliente unCliente)
+{
+	printf("%12s %17s %20s %20s %20d \n\n",  unCliente.cuit,
+										     unCliente.direccion,
+											 unPedido.kilo);
+
+}

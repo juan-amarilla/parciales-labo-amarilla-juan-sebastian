@@ -1,0 +1,35 @@
+//amarilla juan sebastian 1C
+
+#ifndef PEDIDO_H_
+#define PEDIDO_H_
+#define VACIO 0
+#define PENDIENTE 2
+#define COMPLETADO 3
+
+typedef struct
+{
+	int id;
+	float kilo;
+	float kiloPorHDPE;
+	float kiloPorLDPE;
+	float kiloPorPP;
+	int isEmpty;
+
+}ePedido;
+
+/// @fn int inicializarPedidos(ePedido[], int)
+/// @brief su funcion es inicializar en VACIO los pedidos
+///
+/// @param ePedido listaCliente[]
+/// @param int tam
+/// @return retorna 1 si salio bien o -1 si salio mal
+int inicializarPedidos(ePedido listaPedido[], int tam);
+
+/// @fn void imprimirMenuIdPedidoEstructura(listaPedido[], int)
+/// @brief su funcion es mostrar un menu id de pedido
+///
+/// @param eCliente listaCliente[]
+/// @param int tam
+void imprimirMenuIdPedidoEstructura(ePedido listaPedido[], int tam);
+
+#endif /* PEDIDO_H_ */

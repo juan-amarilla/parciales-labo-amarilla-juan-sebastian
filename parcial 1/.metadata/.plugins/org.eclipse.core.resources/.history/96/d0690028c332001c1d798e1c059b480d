@@ -1,0 +1,107 @@
+//amarilla juan sebastian 1C
+
+#include "Validaciones.h"
+
+int validarNumeroEntero(int* numeroEntero, char numero[])
+{
+	int i;
+	int validacion;
+	int entero;
+
+	i = 0;
+	validacion = 1;
+
+	while (numero[i] != '\0')
+	{
+		if(isdigit(numero[i]) != 1)
+		{
+			validacion=0;
+			break;
+		}
+
+		i++;
+
+	}
+
+	if(validacion==1)
+	{
+		entero=atoi(numero);
+		*numeroEntero=entero;
+
+	}
+
+
+	return validacion;
+}
+
+int validarCuit(char cadena[], char cuit[])
+{
+	int retorno;
+	int i;
+
+	retorno = 1;
+	i = 0;
+
+	while(cadena[i]!='\0')
+	{
+	   if(isdigit(cadena[i]) != 1)
+	   {
+		     if((cadena[i] == '-' && i == 2) || (i == 11 && cadena[i] == '-'))
+		     {
+		    	 i++;
+		    	 continue;
+
+		     }
+
+		     retorno=0;
+			 break;
+	   }
+
+	   if((i == 2  && cadena[i] != '-') || (i == 11 && cadena[i] != '-'))
+	   {
+		   retorno=0;
+		   break;
+
+	   }
+
+	   i++;
+
+	}
+
+	if(retorno==1)
+	{
+	   strcpy(cuit, cadena);
+
+	}
+
+	return retorno;
+
+}
+
+int validarLetras(char cadena[], char cadenaValido[])
+{
+	int retorno;
+	int i;
+
+	retorno = 1;
+	i = 0;
+
+	while(cadena[i]!='\0')
+	{
+	     if(isalpha(cadena[i]) == 0 && isspace(cadena[i]) != 0)
+	     {
+	    	   retorno=0;
+	           break;
+	     }
+
+	     i++;
+	}
+
+	if(retorno==1)
+	{
+	   strcpy(cadenaValido, cadena);
+
+	}
+
+	return retorno;
+}

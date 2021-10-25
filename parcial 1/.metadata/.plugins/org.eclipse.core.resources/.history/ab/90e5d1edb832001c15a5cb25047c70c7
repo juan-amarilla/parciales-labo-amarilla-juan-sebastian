@@ -1,0 +1,65 @@
+//amarilla juan sebastian 1C
+
+#include "IngresarDatos.h"
+
+void pedirEnteroValidado(char cadena[], char mensaje[], int* numero, int tamArray)
+{
+	int estado;
+
+	estado = 0;
+
+	printf("%s", mensaje);
+	fflush(stdin);
+	gets(cadena);
+
+	if(strlen(cadena) <= tamArray)
+	{
+		estado = validarNumeroEntero(numero, cadena);
+	}
+
+	while(estado == 0 || strlen(cadena) == 0)
+	{
+		printf("Error: %s", mensaje);
+		fflush(stdin);
+		gets(cadena);
+
+		if(strlen(cadena) <= tamArray)
+		{
+			estado = validarNumeroEntero(numero, cadena);
+		}
+	}
+}
+
+void pedirCuitValidado(char cadena[], char mensaje[], char cuit[])
+{
+	int estado;
+
+	printf("%s", mensaje);
+	fflush(stdin);
+	gets(cadena);
+
+	if(strlen(cadena) == 11)
+    {
+	   estado = validarAlfaNumerico(cadena, cuit);
+	}
+
+}
+
+void pedirCadenaValidado(char cadena[], char mensaje[], char cadenaValidado[])
+{
+	int estado;
+
+    printf("%s", mensaje);
+    fflush(stdin);
+    gets(cadena);
+
+    estado = validarAlfaNumerico(cadenaValidado, cadena);
+
+    while(estado == 0 || strlen(cadena) == 0)
+    {
+    	printf("Error: %s", mensaje);
+    	fflush(stdin);
+    	gets(cadena);
+    	estado = validarAlfaNumerico(cadenaValidado, cadena);
+    }
+}

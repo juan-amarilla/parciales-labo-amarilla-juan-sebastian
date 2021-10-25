@@ -1,0 +1,8 @@
+10:21:04 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+
+10:21:05 Build Finished. 0 errors, 0 warnings. (took 1s.147ms)
+

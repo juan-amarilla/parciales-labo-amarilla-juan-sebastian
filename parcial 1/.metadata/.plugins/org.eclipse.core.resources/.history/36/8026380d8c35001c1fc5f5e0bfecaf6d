@@ -1,0 +1,14 @@
+//amarilla juan sebastian 1C
+
+#ifndef LOCALIDAD_H_
+#define LOCALIDAD_H_
+#define TAM_CARACTER 51
+
+typedef struct
+{
+	int id;
+	char localidad[TAM_CARACTER];
+
+}eLocalidad;
+
+#endif /* LOCALIDAD_H_ */

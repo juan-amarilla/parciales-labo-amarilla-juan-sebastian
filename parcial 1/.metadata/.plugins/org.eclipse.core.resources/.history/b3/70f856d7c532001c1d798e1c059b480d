@@ -1,0 +1,34 @@
+//amarilla juan sebastian 1C
+
+#ifndef INGRESARDATOS_H_
+#define INGRESARDATOS_H_
+
+#include "Validaciones.h"
+
+/// @fn void pedirEnteroValidado(char[], char[], int*, int)
+/// @brief su funcion es ingresar un entero validado
+///
+/// @param char cadena[]
+/// @param char mensaje[]
+/// @param int* numero
+/// @param int tamArray
+void pedirEnteroValidado(char cadena[], char mensaje[], int* numero, int tamArray);
+
+/// @fn void pedirCuitValidado(char[], char[], int*, int)
+/// @brief su funcion es ingresar un cuit validado
+///
+/// @param char cadena[]
+/// @param char mensaje[]
+/// @param char cuit[]
+void pedirCuitValidado(char cadena[], char mensaje[], char cuit[]);
+
+/// @fn void pedirNombre(char[], char[], char[], int)
+/// @brief su funcion es ingresar una cadena
+///
+/// @param char cadena[]
+/// @param char mensaje[]
+/// @param char nombre[]
+/// @param int tamArray
+void pedirNombre(char cadena[], char mensaje[], char nombre[], int tamArray);
+
+#endif /* INGRESARDATOS_H_ */

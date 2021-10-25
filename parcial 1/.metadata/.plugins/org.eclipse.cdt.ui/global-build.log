@@ -1,0 +1,863 @@
+09:00:31 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:00:47 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+..\src\NexoInformes.c: In function 'mostrarCliente':
+..\src\NexoInformes.c:11:24: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+               unCliente.localidad,
+                        ^
+09:01:04 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+In file included from ..\src\Nexo.h:5:0,
+                 from ..\src\Nexo.c:3:
+..\src\Cliente.h:21:2: error: expected ':', ',', ';', '}' or '__attribute__' before 'int'
+  int isEmpty;
+  ^~~
+..\src\Nexo.c: In function 'lograrMostrarClientes':
+..\src\Nexo.c:165:33: error: 'eCliente {aka struct <anonymous>}' has no member named 'isEmpty'
+   if(buscarLibre(listaCliente[i].isEmpty) == OCUPADO)
+                                 ^
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:308:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+09:01:07 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+..\src\NexoInformes.c: In function 'mostrarCliente':
+..\src\NexoInformes.c:11:24: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+               unCliente.localidad,
+                        ^
+09:01:44 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:05:11 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:72:52: error: incompatible type for argument 2 of 'pedirCliente'
+    listaCliente[i] = pedirCliente(listaCliente[i], cadena, id, listaCliente);
+                                                    ^~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:51:10: note: expected 'eLocalidad {aka struct <anonymous>}' but argument is of type 'char *'
+ eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[]);
+          ^~~~~~~~~~~~
+..\src\Cliente.c:72:60: warning: passing argument 3 of 'pedirCliente' makes pointer from integer without a cast [-Wint-conversion]
+    listaCliente[i] = pedirCliente(listaCliente[i], cadena, id, listaCliente);
+                                                            ^~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:51:10: note: expected 'char *' but argument is of type 'int'
+ eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[]);
+          ^~~~~~~~~~~~
+..\src\Cliente.c:72:64: warning: passing argument 4 of 'pedirCliente' makes integer from pointer without a cast [-Wint-conversion]
+    listaCliente[i] = pedirCliente(listaCliente[i], cadena, id, listaCliente);
+                                                                ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:51:10: note: expected 'int' but argument is of type 'eCliente * {aka struct <anonymous> *}'
+ eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[]);
+          ^~~~~~~~~~~~
+..\src\Cliente.c:72:22: error: too few arguments to function 'pedirCliente'
+    listaCliente[i] = pedirCliente(listaCliente[i], cadena, id, listaCliente);
+                      ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:51:10: note: declared here
+ eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[]);
+          ^~~~~~~~~~~~
+09:05:23 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:108:57: warning: passing argument 3 of 'altaCliente' from incompatible pointer type [-Wincompatible-pointer-types]
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+                                                         ^~~~~~~~~~~~~~
+In file included from ..\src\Nexo.h:5:0,
+                 from ..\src\examen 1.c:69:
+..\src\Cliente.h:49:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'char *'
+ int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~
+..\src\examen 1.c:108:18: error: too few arguments to function 'altaCliente'
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+                  ^~~~~~~~~~~
+In file included from ..\src\Nexo.h:5:0,
+                 from ..\src\examen 1.c:69:
+..\src\Cliente.h:49:5: note: declared here
+ int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~
+09:05:40 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:06:59 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:13:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:92: error: expected expression before ']' token
+   retorno = altaClienteParte2(listaCliente, listaLocalidad, tamLocal, listaCliente, cadena[], id);
+                                                                                            ^
+..\src\Cliente.c:66:31: error: incompatible type for argument 1 of 'altaClienteParte2'
+   retorno = altaClienteParte2(listaCliente, listaLocalidad, tamLocal, listaCliente, cadena[], id);
+                               ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: expected 'eCliente {aka struct <anonymous>}' but argument is of type 'eCliente * {aka struct <anonymous> *}'
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+..\src\Cliente.c:66:71: warning: passing argument 4 of 'altaClienteParte2' from incompatible pointer type [-Wincompatible-pointer-types]
+   retorno = altaClienteParte2(listaCliente, listaLocalidad, tamLocal, listaCliente, cadena[], id);
+                                                                       ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: expected 'char *' but argument is of type 'eCliente * {aka struct <anonymous> *}'
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+..\src\Cliente.c:66:13: error: too many arguments to function 'altaClienteParte2'
+   retorno = altaClienteParte2(listaCliente, listaLocalidad, tamLocal, listaCliente, cadena[], id);
+             ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: declared here
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+..\src\Cliente.c: At top level:
+..\src\Cliente.c:73:5: error: conflicting types for 'altaClienteParte2'
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, eCliente lista[], char cadena[], int id)
+     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: previous declaration of 'altaClienteParte2' was here
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:84:30: error: subscripted value is neither array nor pointer nor vector
+   if(buscarLibre(listaCliente[i].isEmpty) != OCUPADO)
+                              ^
+09:14:30 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:95: error: expected expression before ']' token
+   retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, listaCliente, cadena[], id);
+                                                                                               ^
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:84:30: error: subscripted value is neither array nor pointer nor vector
+   if(buscarLibre(listaCliente[i].isEmpty) != OCUPADO)
+                              ^
+09:14:50 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:84:30: error: subscripted value is neither array nor pointer nor vector
+   if(buscarLibre(listaCliente[i].isEmpty) != OCUPADO)
+                              ^
+09:15:11 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:70:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:15:17 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:95: error: expected expression before ']' token
+   retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, listaCliente, cadena[], id);
+                                                                                               ^
+09:15:26 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:21:46 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+In file included from ..\src\NexoInformes.h:6:0,
+                 from ..\src\NexoInformes.c:3:
+..\src\Cliente.h:48:77: error: expected ';', ',' or ')' before 'char'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad char cadena[], int id);
+                                                                             ^~~~
+09:21:56 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:59:77: error: expected ';', ',' or ')' before 'char'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad char cadena[], int id)
+                                                                             ^~~~
+09:22:06 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:59:77: error: expected ';', ',' or ')' before 'char'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad char cadena[], int id)
+                                                                             ^~~~
+09:22:54 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:59:77: error: expected ';', ',' or ')' before 'char'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad char cadena[], int id)
+                                                                             ^~~~
+09:23:11 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:59:77: error: expected ';', ',' or ')' before 'char'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad char cadena[], int id)
+                                                                             ^~~~
+09:23:24 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:72:78: error: 'lista' undeclared (first use in this function)
+     listaCliente = pedirCliente(listaCliente[i], listaLocalidad, cadena, id, lista);
+                                                                              ^~~~~
+..\src\Cliente.c:72:78: note: each undeclared identifier is reported only once for each function it appears in
+09:23:38 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:72:18: error: incompatible types when assigning to type 'eCliente * {aka struct <anonymous> *}' from type 'eCliente {aka struct <anonymous>}'
+     listaCliente = pedirCliente(listaCliente[i], listaLocalidad, cadena, id, listaCliente);
+                  ^
+09:24:38 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:82:5: error: redefinition of 'altaCliente'
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad, char cadena[], int id)
+     ^~~~~~~~~~~
+..\src\Cliente.c:59:5: note: previous definition of 'altaCliente' was here
+ int altaCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad, char cadena[], int id)
+     ^~~~~~~~~~~
+09:25:00 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:26:00 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:27:12 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:31: error: incompatible type for argument 1 of 'altaClienteParte2'
+   retorno = altaClienteParte2(listaCliente[i], tam, listaLocalidad, tamLocal, cadena, id);
+                               ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: expected 'eCliente * {aka struct <anonymous> *}' but argument is of type 'eCliente {aka struct <anonymous>}'
+ int altaClienteParte2(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+09:27:40 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:28:33 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:70:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:28:49 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:70:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:29:57 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:70:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:31:16 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:86:13: warning: unused variable 'listaLocalidad' [-Wunused-variable]
+  eLocalidad listaLocalidad[TAM_CLIENTE];
+             ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:74: error: expected expression before 'eCliente'
+   retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, eCliente lista[], char cadena[], int id);
+                                                                          ^~~~~~~~
+..\src\Cliente.c:66:13: error: too few arguments to function 'altaClienteParte2'
+   retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, eCliente lista[], char cadena[], int id);
+             ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:50:5: note: declared here
+ int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, eCliente lista[], char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+09:31:58 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaCliente':
+..\src\Cliente.c:66:96: error: expected expression before 'int'
+   retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, listaCliente, cadena, int id);
+                                                                                                ^~~
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+09:32:06 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'altaClienteParte2':
+..\src\Cliente.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:33:22 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:34:07 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:34:24 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:34:53 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:35:04 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:111:57: warning: passing argument 3 of 'altaCliente' from incompatible pointer type [-Wincompatible-pointer-types]
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+                                                         ^~~~~~~~~~~~~~
+In file included from ..\src\Nexo.h:5:0,
+                 from ..\src\examen 1.c:69:
+..\src\Cliente.h:48:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'char *'
+ int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~
+..\src\examen 1.c:111:18: error: too few arguments to function 'altaCliente'
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+                  ^~~~~~~~~~~
+In file included from ..\src\Nexo.h:5:0,
+                 from ..\src\examen 1.c:69:
+..\src\Cliente.h:48:5: note: declared here
+ int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~
+..\src\examen 1.c:86:13: warning: unused variable 'listaLocalidad' [-Wunused-variable]
+  eLocalidad listaLocalidad[TAM_CLIENTE];
+             ^~~~~~~~~~~~~~
+09:35:35 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:111:86: error: 'cadena' undeclared (first use in this function)
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadena, id);
+                                                                                      ^~~~~~
+..\src\examen 1.c:111:86: note: each undeclared identifier is reported only once for each function it appears in
+..\src\examen 1.c:111:94: error: 'id' undeclared (first use in this function)
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadena, id);
+                                                                                              ^~
+09:35:49 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:111:86: error: 'cadena' undeclared (first use in this function)
+        retorno = altaCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadena, auxiliar.idCliente);
+                                                                                      ^~~~~~
+..\src\examen 1.c:111:86: note: each undeclared identifier is reported only once for each function it appears in
+09:35:59 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:37:29 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:40:02 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarCliente':
+..\src\Cliente.c:145:62: warning: passing argument 3 of 'modificarUnDatoDeCliente' from incompatible pointer type [-Wincompatible-pointer-types]
+   retorno = modificarUnDatoDeCliente(listaCliente, tamClien, cadena);
+                                                              ^~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:63:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'char *'
+ int modificarUnDatoDeCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal, char cadena[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Cliente.c:145:13: error: too few arguments to function 'modificarUnDatoDeCliente'
+   retorno = modificarUnDatoDeCliente(listaCliente, tamClien, cadena);
+             ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:63:5: note: declared here
+ int modificarUnDatoDeCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal, char cadena[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+09:40:32 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:43:10 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeCliente':
+..\src\Cliente.c:163:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+..\src\Cliente.c: In function 'modificarUnDatoDeClienteParte2':
+..\src\Cliente.c:199:56: error: incompatible type for argument 3 of 'opcionDeModificarCliente'
+     retorno = opcionDeModificarCliente(opcion, cadena, listaCliente, i, retorno);
+                                                        ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:76:5: note: expected 'eCliente * {aka struct <anonymous> *}' but argument is of type 'eCliente {aka struct <anonymous>}'
+ int opcionDeModificarCliente(int opcion, char cadena[], eCliente listaCliente[], int i, int retorno);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+09:44:10 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeCliente':
+..\src\Cliente.c:163:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+..\src\Cliente.c:173:12: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+     return retorno;
+            ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:44:54 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeCliente':
+..\src\Cliente.c:172:12: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+     return retorno;
+            ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:45:29 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeCliente':
+..\src\Cliente.c:169:58: error: 'lista' undeclared (first use in this function)
+   retorno = modificarUnDatoDeClienteParte2(listaCliente, lista, listaLocalidad, tamLocal, cadena, id);
+                                                          ^~~~~
+..\src\Cliente.c:169:58: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Cliente.c:169:44: error: incompatible type for argument 1 of 'modificarUnDatoDeClienteParte2'
+   retorno = modificarUnDatoDeClienteParte2(listaCliente, lista, listaLocalidad, tamLocal, cadena, id);
+                                            ^~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:65:5: note: expected 'eCliente {aka struct <anonymous>}' but argument is of type 'eCliente * {aka struct <anonymous> *}'
+ int modificarUnDatoDeClienteParte2(eCliente listaCliente, eCliente lista[], eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+09:45:35 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeCliente':
+..\src\Cliente.c:169:61: error: 'lista' undeclared (first use in this function)
+   retorno = modificarUnDatoDeClienteParte2(listaCliente[i], lista, listaLocalidad, tamLocal, cadena, id);
+                                                             ^~~~~
+..\src\Cliente.c:169:61: note: each undeclared identifier is reported only once for each function it appears in
+09:45:45 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:47:13 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'modificarUnDatoDeClienteParte2':
+..\src\Cliente.c:200:15: error: too few arguments to function 'opcionDeModificarCliente'
+     retorno = opcionDeModificarCliente(opcion, cadena, lista, i, retorno);
+               ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Cliente.c:3:0:
+..\src\Cliente.h:67:5: note: declared here
+ int opcionDeModificarCliente(int opcion, char cadena[], eCliente listaCliente[], int i, int retorno, eLocalidad listaLocalidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+09:47:46 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:53:40 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c:151:5: error: conflicting types for 'lograrMostrarClientes'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: previous declaration of 'lograrMostrarClientes' was here
+ int lograrMostrarClientes(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+09:53:56 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:139:18: error: too few arguments to function 'mostrarClientes'
+        retorno = mostrarClientes(listaCliente, TAM_CLIENTE);
+                  ^~~~~~~~~~~~~~~
+In file included from ..\src\examen 1.c:69:0:
+..\src\Nexo.h:83:5: note: declared here
+ int mostrarClientes(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~
+09:54:27 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:144:35: error: incompatible type for argument 1 of 'lograrMostrarClientes'
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                   ^~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'eCliente * {aka struct <anonymous> *}' but argument is of type 'eCliente {aka struct <anonymous>}'
+ int lograrMostrarClientes(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c: At top level:
+..\src\Nexo.c:151:5: error: conflicting types for 'lograrMostrarClientes'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: previous declaration of 'lograrMostrarClientes' was here
+ int lograrMostrarClientes(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+09:54:49 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:144:52: warning: passing argument 2 of 'lograrMostrarClientes' makes pointer from integer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                    ^~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'int'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:57: warning: passing argument 3 of 'lograrMostrarClientes' makes integer from pointer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                         ^~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'int' but argument is of type 'eLocalidad * {aka struct <anonymous> *}'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:13: error: too many arguments to function 'lograrMostrarClientes'
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+             ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: declared here
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+09:55:20 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:147:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:55:38 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:144:52: warning: passing argument 2 of 'lograrMostrarClientes' makes pointer from integer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                    ^~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'int'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:57: warning: passing argument 3 of 'lograrMostrarClientes' makes integer from pointer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                         ^~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'int' but argument is of type 'eLocalidad * {aka struct <anonymous> *}'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:13: error: too many arguments to function 'lograrMostrarClientes'
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+             ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: declared here
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+09:56:10 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:144:52: warning: passing argument 2 of 'lograrMostrarClientes' makes pointer from integer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                    ^~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'eLocalidad * {aka struct <anonymous> *}' but argument is of type 'int'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:57: warning: passing argument 3 of 'lograrMostrarClientes' makes integer from pointer without a cast [-Wint-conversion]
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+                                                         ^~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: expected 'int' but argument is of type 'eLocalidad * {aka struct <anonymous> *}'
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c:144:13: error: too many arguments to function 'lograrMostrarClientes'
+   retorno = lograrMostrarClientes(listaCliente[i], tam, listaLocalidad, tamLocal);
+             ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:85:5: note: declared here
+ int lograrMostrarClientes(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~
+09:56:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'mostrarClientes':
+..\src\Nexo.c:144:68: error: expected expression before 'int'
+   retorno = lograrMostrarClientes(listaCliente[i], listaLocalidad, int tamLocal);
+                                                                    ^~~
+09:56:47 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:57:48 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:58:29 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+09:59:31 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+Info: Nothing to build for examen 1
+10:03:10 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c: In function 'pedirCliente':
+..\src\Cliente.c:106:62: error: 'eCliente {aka struct <anonymous>}' has no member named 'direccion'
+  pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente.direccion, TAM_CARACTER);
+                                                              ^
+..\src\Cliente.c:108:36: error: 'eCliente {aka struct <anonymous>}' has no member named 'direccion'
+  mayusculasAutomaticos(listaCliente.direccion, TAM_CARACTER);
+                                    ^
+..\src\Cliente.c: In function 'opcionDeModificarCliente':
+..\src\Cliente.c:220:66: error: 'eCliente {aka struct <anonymous>}' has no member named 'direccion'
+   pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente[i].direccion, TAM_CARACTER);
+                                                                  ^
+..\src\Cliente.c:221:40: error: 'eCliente {aka struct <anonymous>}' has no member named 'direccion'
+   mayusculasAutomaticos(listaCliente[i].direccion, TAM_CARACTER);
+                                        ^
+10:03:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:312:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:05:19 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:312:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:06:11 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Localidad.o" "..\\src\\Localidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:312:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:07:08 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:312:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:08:19 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:315:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:09:05 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c:284:5: error: conflicting types for 'cantidadPedidosPendientesPorUnaLocalidad'
+ int cantidadPedidosPendientesPorUnaLocalidad(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Nexo.c:3:0:
+..\src\Nexo.h:133:5: note: previous declaration of 'cantidadPedidosPendientesPorUnaLocalidad' was here
+ int cantidadPedidosPendientesPorUnaLocalidad(eCliente listaCliente[], int tam);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:315:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:09:46 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'cantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:287:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:316:55: error: 'eCliente {aka struct <anonymous>}' has no member named 'localidad'; did you mean 'idLocalidad'?
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                       ^
+10:11:05 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:154:18: error: too few arguments to function 'cantidadPedidosPendientesPorUnaLocalidad'
+        retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\examen 1.c:69:0:
+..\src\Nexo.h:127:5: note: declared here
+ int cantidadPedidosPendientesPorUnaLocalidad(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10:11:19 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:319:52: error: subscripted value is neither array nor pointer nor vector
+        if(comparacionCadena(localidad, listaCliente[i].localidad) == 0)
+                                                    ^
+..\src\Nexo.c:321:42: error: subscripted value is neither array nor pointer nor vector
+         auxiliar.contador += listaCliente[i].contadorPendiente;
+                                          ^
+10:13:00 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:154:18: error: too few arguments to function 'cantidadPedidosPendientesPorUnaLocalidad'
+        retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\examen 1.c:69:0:
+..\src\Nexo.h:127:5: note: declared here
+ int cantidadPedidosPendientesPorUnaLocalidad(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10:13:58 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+..\src\examen 1.c: In function 'main':
+..\src\examen 1.c:154:18: error: too few arguments to function 'cantidadPedidosPendientesPorUnaLocalidad'
+        retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\examen 1.c:69:0:
+..\src\Nexo.h:127:5: note: declared here
+ int cantidadPedidosPendientesPorUnaLocalidad(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10:14:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:15:24 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:319:104: error: 'I' undeclared (first use in this function)
+        if(comparacionCadena(localidad, listaLocalidad[i].localidad) == 0 && buscarLibre(listaLocalidad[I].isEmpty) == OCUPADO)
+                                                                                                        ^
+..\src\Nexo.c:319:104: note: each undeclared identifier is reported only once for each function it appears in
+10:15:33 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:319:89: error: 'listaLocaliad' undeclared (first use in this function)
+        if(comparacionCadena(localidad, listaLocalidad[i].localidad) == 0 && buscarLibre(listaLocaliad[I].isEmpty) == OCUPADO)
+                                                                                         ^~~~~~~~~~~~~
+..\src\Nexo.c:319:89: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Nexo.c:319:103: error: 'I' undeclared (first use in this function)
+        if(comparacionCadena(localidad, listaLocalidad[i].localidad) == 0 && buscarLibre(listaLocaliad[I].isEmpty) == OCUPADO)
+                                                                                                       ^
+10:15:41 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrCantidadPedidosPendientesPorUnaLocalidad':
+..\src\Nexo.c:319:104: error: 'I' undeclared (first use in this function)
+        if(comparacionCadena(localidad, listaLocalidad[i].localidad) == 0 && buscarLibre(listaLocalidad[I].isEmpty) == OCUPADO)
+                                                                                                        ^
+..\src\Nexo.c:319:104: note: each undeclared identifier is reported only once for each function it appears in
+10:15:46 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:16:54 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OtrasFunciones.o" "..\\src\\OtrasFunciones.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:18:55 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OtrasFunciones.o" "..\\src\\OtrasFunciones.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+Info: Nothing to build for examen 1
+10:21:04 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 

@@ -1,0 +1,37 @@
+//amarilla juan sebastian 1C
+
+#ifndef NEXOINFORMES_H_
+#define NEXOINFORMES_H_
+
+#include "Cliente.h"
+#include "Pedido.h"
+
+/// @fn void mostrarCliente(eCliente, ePedido)
+/// @brief su funcion es mostrar un cliente
+///
+/// @param eCliente unCliente
+void mostrarCliente(eCliente unCliente);
+
+/// @fn void mostrarPedido(ePedido, eCliente)
+/// @brief su funcion es mostrar un pedido pendiente
+///
+/// @param ePedido unPedido
+/// @param eCliente unCliente
+void mostrarPedido(ePedido unPedido, eCliente unCliente);
+
+/// @fn void mostrarPedidoProcesado(ePedido, eCliente)
+/// @brief su funcion es mostrar un pedido procesado
+///
+/// @param ePedido unPedido
+/// @param eCliente unCliente
+void mostrarPedidoProcesado(ePedido unPedido, eCliente unCliente);
+
+/// @fn void mostrarCantidadPedidosPendientesPorUnaLocalidad(eAuxiliar, char[])
+/// @brief su funcion es mostrar los pedidos pendientes por dicha localidad
+///
+/// @param eAuxiliar auxiliar
+/// @param char localidad
+void mostrarCantidadPedidosPendientesPorUnaLocalidad(eAuxiliar auxiliar, char localidad[]);
+
+
+#endif /* NEXOINFORMES_H_ */

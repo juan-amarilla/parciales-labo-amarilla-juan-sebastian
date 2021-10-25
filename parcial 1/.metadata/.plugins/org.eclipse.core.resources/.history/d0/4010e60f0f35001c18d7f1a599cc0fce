@@ -1,0 +1,8 @@
+//amarilla juan sebastian 1C
+
+#ifndef CLIENTEINFORMES_H_
+#define CLIENTEINFORMES_H_
+
+void mostrarCliente(eCliente unCliente);
+
+#endif /* CLIENTEINFORMES_H_ */
