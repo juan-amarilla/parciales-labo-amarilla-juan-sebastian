@@ -861,3 +861,185 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
 gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:29:16 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidosPendiente':
+..\src\Nexo.c:440:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  int flag;
+      ^~~~
+..\src\Nexo.c:454:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:29:56 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidosPendiente':
+..\src\Nexo.c:439:6: warning: variable 'maximo' set but not used [-Wunused-but-set-variable]
+  int maximo;
+      ^~~~~~
+..\src\Nexo.c:454:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:31:41 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidosPendiente':
+..\src\Nexo.c:447:41: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if(listaCliente[i].isEmpty == OCUPADO && flag == 0 || maximo < listaCliente[i].contadorPendiente && flag == 1)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\src\Nexo.c:459:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:31:56 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidosPendiente':
+..\src\Nexo.c:459:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:32:50 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:35:21 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidosPendiente':
+..\src\Nexo.c:470:70: error: expected expression before ')' token
+   printf("El cliente %s es el que tiene mas pedidos pendientes: %d", );
+                                                                      ^
+10:35:36 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:37:28 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'lograrProcesoDeResiduos':
+..\src\Nexo.c:126:19: error: 'eCliente {aka struct <anonymous>}' has no member named 'contadorProcesado'; did you mean 'contadorPendiente'?
+    listaCliente[j].contadorProcesado++;
+                   ^
+10:39:39 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoInformes.o" "..\\src\\NexoInformes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:40:52 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:43:51 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:43:58 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:44:18 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:45:42 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:47:00 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:528:12: warning: unused variable 'contador' [-Wunused-variable]
+  eAuxiliar contador[TAM_CLIENTE];
+            ^~~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:48:15 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'inicializarAuxiliarArray':
+..\src\Nexo.c:26:6: error: 'i' undeclared (first use in this function)
+  for(i=0;i<tam;i++)
+      ^
+..\src\Nexo.c:26:6: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Nexo.c:33:12: error: incompatible types when returning type 'eAuxiliar * {aka struct <anonymous> *}' but 'eAuxiliar {aka struct <anonymous>}' was expected
+     return auxiliar;
+            ^~~~~~~~
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:541:12: warning: unused variable 'contador' [-Wunused-variable]
+  eAuxiliar contador[TAM_CLIENTE];
+            ^~~~~~~~
+..\src\Nexo.c: In function 'inicializarAuxiliarArray':
+..\src\Nexo.c:34:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+10:48:23 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'inicializarAuxiliarArray':
+..\src\Nexo.c:34:12: error: incompatible types when returning type 'eAuxiliar * {aka struct <anonymous> *}' but 'eAuxiliar {aka struct <anonymous>}' was expected
+     return auxiliar;
+            ^~~~~~~~
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:542:12: warning: unused variable 'contador' [-Wunused-variable]
+  eAuxiliar contador[TAM_CLIENTE];
+            ^~~~~~~~
+..\src\Nexo.c: In function 'inicializarAuxiliarArray':
+..\src\Nexo.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+10:48:44 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:540:12: warning: unused variable 'contador' [-Wunused-variable]
+  eAuxiliar contador[TAM_CLIENTE];
+            ^~~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:49:20 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\examen 1.o" "..\\src\\examen 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:540:12: warning: unused variable 'contador' [-Wunused-variable]
+  eAuxiliar contador[TAM_CLIENTE];
+            ^~~~~~~~
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:49:48 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:552:67: error: invalid operands to binary < (have 'int' and 'eAuxiliar {aka struct <anonymous>}')
+   if((listaCliente[i].isEmpty == OCUPADO && flag == 0) || (maximo < contador[i] && flag == 1))
+                                                                   ^ ~~~~~~~~~~~
+10:50:00 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:50:36 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+..\src\Nexo.c: In function 'pedidos':
+..\src\Nexo.c:545:27: error: 'auxiliar' undeclared (first use in this function)
+  inicializarAuxiliarArray(auxiliar, tam);
+                           ^~~~~~~~
+..\src\Nexo.c:545:27: note: each undeclared identifier is reported only once for each function it appears in
+10:50:49 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 
+10:51:38 **** Incremental Build of configuration Debug for project examen 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -o "examen 1.exe" "src\\Cliente.o" "src\\IngresarDatos.o" "src\\Localidad.o" "src\\Nexo.o" "src\\NexoInformes.o" "src\\OtrasFunciones.o" "src\\Pedido.o" "src\\Validaciones.o" "src\\examen 1.o" 

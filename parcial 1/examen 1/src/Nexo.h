@@ -29,6 +29,13 @@ eAuxiliar inicializarId(eAuxiliar auxiliar);
 /// @return retorna el dato inicializado
 eAuxiliar inicializarAuxiliar(eAuxiliar auxiliar);
 
+/// @fn void inicializarAuxiliarArray(eAuxiliar[], int)
+/// @brief su funcion es inicializar los arrays
+///
+/// @param eAuxiliar auxiliar[]
+/// @param int tam
+void inicializarAuxiliarArray(eAuxiliar auxiliar[], int tam);
+
 /// @fn int verificarId(int, int)
 /// @brief su funcion es verificar si la id se ingreso de manera correcta
 ///
@@ -177,5 +184,11 @@ void contarDePP(ePedido listaPedido[], int tam, int* contador, int id);
 /// @param float* acumulador
 /// @return retorna 1 si salio bien, 0 si algo paso en el proceso o -1 si no se logro nada
 int acumularPP(ePedido listaPedido[], int tam, float* acumulador);
+
+int pedidosPendiente(eCliente listaCliente[], int tam);
+
+int pedidosCompletados(eCliente listaCliente[], int tam);
+
+int pedidos(eCliente listaCliente[], int tam);
 
 #endif /* NEXO_H_ */

@@ -20,6 +20,18 @@ eAuxiliar inicializarAuxiliar(eAuxiliar auxiliar)
     return auxiliar;
 }
 
+void inicializarAuxiliarArray(eAuxiliar auxiliar[], int tam)
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		auxiliar[i].contador = 0;
+		auxiliar[i].acumulador = 0;
+
+	}
+}
+
 int verificarId(int estado, int id)
 {
 	if(estado == 0 || estado == -1)
@@ -123,6 +135,7 @@ int lograrProcesoDeResiduos(ePedido listaPedido[], int tamPedi, eCliente listaCl
 		{
 			listaPedido[i].kilo = 0;
 			listaCliente[j].contadorPendiente--;
+			listaCliente[j].contadorProcesado++;
 			listaPedido[i].isEmpty = COMPLETADO;
 			retorno = 1;
 
@@ -426,6 +439,137 @@ int acumularPP(ePedido listaPedido[], int tam, float* acumulador)
             	retorno = 1;
             }
 		}
+
+	}
+
+	return retorno;
+
+}
+
+int pedidosPendiente(eCliente listaCliente[], int tam)
+{
+	int i;
+	int maximo;
+	int flag;
+	int retorno;
+	char nombre[TAM_CARACTER];
+
+	flag = 0;
+	retorno = -1;
+
+	for(i=0;i<tam;i++)
+	{
+		if(retorno == -1)
+		{
+			retorno = 0;
+		}
+
+		if((listaCliente[i].isEmpty == OCUPADO && flag == 0) || (maximo < listaCliente[i].contadorPendiente && flag == 1))
+		{
+			maximo = listaCliente[i].contadorPendiente;
+			strcpy(nombre, listaCliente[i].nombre);
+
+			if(flag == 0 && retorno == 0)
+			{
+				flag = 1;
+				retorno = 1;
+			}
+		}
+
+	}
+
+	if(retorno == 1)
+	{
+		printf("El cliente %s es el que tiene mas pedidos pendientes: %d \n", nombre, maximo);
+
+	}
+
+	return retorno;
+
+}
+
+int pedidosCompletados(eCliente listaCliente[], int tam)
+{
+	int i;
+	int maximo;
+	int flag;
+	int retorno;
+	char nombre[TAM_CARACTER];
+
+	flag = 0;
+	retorno = -1;
+
+	for(i=0;i<tam;i++)
+	{
+		if(retorno == -1)
+		{
+			retorno = 0;
+		}
+
+		if((listaCliente[i].isEmpty == OCUPADO && flag == 0) || (maximo < listaCliente[i].contadorProcesado && flag == 1))
+		{
+			maximo = listaCliente[i].contadorProcesado;
+			strcpy(nombre, listaCliente[i].nombre);
+
+			if(flag == 0 && retorno == 0)
+			{
+				flag = 1;
+				retorno = 1;
+			}
+		}
+
+	}
+
+	if(retorno == 1)
+	{
+		printf("El cliente %s es el que tiene mas pedidos procesados: %d \n", nombre, maximo);
+
+	}
+
+	return retorno;
+
+}
+
+int pedidos(eCliente listaCliente[], int tam)
+{
+	int i;
+	int maximo;
+	int flag;
+	int retorno;
+	char nombre[TAM_CARACTER];
+	eAuxiliar auxiliar[TAM_CLIENTE];
+
+	flag = 0;
+	retorno = -1;
+
+	inicializarAuxiliarArray(auxiliar, tam);
+
+	for(i=0;i<tam;i++)
+	{
+		if(retorno == -1)
+		{
+			retorno = 0;
+		}
+
+		auxiliar[i].contador = listaCliente[i].contadorProcesado + listaCliente[i].contadorPendiente;
+
+		if((listaCliente[i].isEmpty == OCUPADO && flag == 0) || (maximo < auxiliar[i].contador && flag == 1))
+		{
+			maximo = auxiliar[i].contador;
+			strcpy(nombre, listaCliente[i].nombre);
+
+			if(flag == 0 && retorno == 0)
+			{
+				flag = 1;
+				retorno = 1;
+			}
+		}
+
+	}
+
+	if(retorno == 1)
+	{
+		printf("El cliente %s es el que tiene mas pedidos procesados: %d \n", nombre, maximo);
 
 	}
 

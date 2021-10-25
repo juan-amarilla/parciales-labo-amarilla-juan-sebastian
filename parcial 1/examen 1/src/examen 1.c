@@ -161,12 +161,18 @@ int main(void)
     	  break;
 
     	  case 11:
+    	  retorno = pedidosPendiente(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 12:
+    	  retorno = pedidosCompletados(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 13:
+    	  retorno = pedidos(listaCliente, TAM_CLIENTE);
+    	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 14:

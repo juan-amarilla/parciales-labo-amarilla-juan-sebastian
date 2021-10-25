@@ -15,6 +15,7 @@ typedef struct
 	int id;
 	int idLocalidad;
 	int contadorPendiente;
+	int contadorProcesado;
     char nombre[TAM_CARACTER];
     char cuit[TAM_CARACTER];
     char direccion[TAM_CARACTER];
