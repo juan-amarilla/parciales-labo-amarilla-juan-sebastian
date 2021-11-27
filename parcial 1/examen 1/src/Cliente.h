@@ -13,15 +13,22 @@
 typedef struct
 {
 	int id;
-	int idLocalidad;
-	int contadorPendiente;
-	int contadorProcesado;
     char nombre[TAM_CARACTER];
     char cuit[TAM_CARACTER];
     char direccion[TAM_CARACTER];
 	int isEmpty;
 
 }eCliente;
+
+/// @fn int inicializarClientes(eCliente[], int)
+/// @brief su funcion es inicializar el isEmpty
+///
+/// @param eCliente listaCliente[]
+/// @param int tam
+/// @return retorna 1 si salio bien o -1 si salio mal
+int inicializarClientes(eCliente listaCliente[], int tam);
+
+int verificarCliente(eCliente listaCliente[], int tam);
 
 /// @fn void verificarCuit(char[], eCliente[])
 /// @brief su funcion es verificar un cuit
@@ -37,29 +44,26 @@ void verificarCuit(char cadena[], eCliente listaCliente[]);
 /// @param eCliente listaCliente[]
 void verificarNombre(char cadena[], eCliente listaCliente[]);
 
-/// @fn int inicializarClientes(eCliente[], int)
-/// @brief su funcion es inicializar el isEmpty como los contadores
+/// @fn int altaCliente(eCliente[], eLocalidad[], int, char[], int)
+/// @brief su funcion es dar de alta un cliente
 ///
 /// @param eCliente listaCliente[]
-/// @param int tam
-/// @return retorna 1 si salio bien o -1 si salio mal
-int inicializarClientes(eCliente listaCliente[], int tam);
-
-/// @fn int altaCliente(eCliente[], int, eLocalidad[], int, char[], int)
-/// @brief su funcion es dar de alta
-///
-/// @param eCliente listaCliente[]
-/// @param int tamClien
 /// @param eLocalidad listaLocalidad[]
-/// @param tamLocal
-/// @param cadena
-/// @param id
-/// @return
-int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
+/// @param int tam
+/// @param char cadena[]
+/// @param int id
+/// @return retorna -1 si no logro nada, 0 si algo paso en el proceso o 1 si salio bien
+int altaCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[], int id);
 
-int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, eCliente lista[], char cadena[], int id);
-
-eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[]);
+/// @fn eCliente pedirCliente(eCliente, char[], int, eCliente[])
+/// @brief su funcion es pedir los datos de un cliente
+///
+/// @param eCliente listaCliente
+/// @param char cadena[]
+/// @param int id
+/// @param eCliente lista[]
+/// @return retorna los datos ingresados
+eCliente pedirCliente(eCliente listaCliente, char cadena[], int id, eCliente lista[]);
 
 /// @fn void imprimirMenuIdClienteEstructura(eCliente[], int)
 /// @brief su funcion es mostrar un menu id de cliente
@@ -68,13 +72,25 @@ eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cad
 /// @param int tam
 void imprimirMenuIdClienteEstructura(eCliente listaCliente[], int tam);
 
-int modificarCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[]);
+/// @fn int modificarCliente(eCliente[], eLocalidad[], int, char[])
+/// @brief su funcion es modificar los datos de un cliente
+///
+/// @param eCliente listaCliente[]
+/// @param eLocalidad listaLocalidad[]
+/// @param int tam
+/// @param char cadena[]
+/// @return retorna -1 si no logro nada, 0 si algo paso en el proceso o 1 si salio bien
+int modificarCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[]);
 
-int modificarUnDatoDeCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal, char cadena[]);
-
-int modificarUnDatoDeClienteParte2(eCliente listaCliente, eCliente lista[], eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id);
-
-int opcionDeModificarCliente(int opcion, char cadena[], eCliente listaCliente[], int i, int retorno, eLocalidad listaLocalidad);
+/// @fn int modificarUnDatoDeCliente(eCliente[], eLocalidad[], int, char[])
+/// @brief su funcion es modificar un dato de un cliente
+///
+/// @param eCliente listaCliente[]
+/// @param eLocalidad listaLocalidad[]
+/// @param int tam
+/// @param char cadena[]
+/// @return retorna -1 si no logro nada, 0 si algo paso en el proceso o 1 si salio bien
+int modificarUnDatoDeCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[]);
 
 /// @fn int bajaCliente(eCliente[], int, char[])
 /// @brief su funcion es dar de baja un cliente

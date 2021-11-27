@@ -60,6 +60,16 @@ pendientes para dicha localidad.
 
 10) Cantidad de kilos de polipropileno reciclado promedio por
 cliente. (kilos totales / cantidad de clientes)
+
+-PARTE 2:
+
+1) Agregar la entidad Localidad.
+2) Refactorizar las funciones que considere necesarias para que utilicen la nueva entidad.
+3) Agregar los siguientes informes:
+
+a) Cliente con más pedidos pendientes.
+b) Cliente con más pedidos completados.
+c) Cliente con más pedidos.
 ============================================================================
  */
 
@@ -72,52 +82,40 @@ cliente. (kilos totales / cantidad de clientes)
 int main(void)
 {
 	int opcion;
-	int tamArray;
 	int retorno;
 	char cadenaAuxiliar[TAM_CARACTER];
-	eCliente listaCliente[TAM_CLIENTE]; /*= {{1,2,"arg","12-12345678-1","Calle Argento","avellaneda",OCUPADO},
-			                                {2,1,"br","12-12345678-2","calle brasil","avellaneda",OCUPADO},
-			                                {3,0,"ark","32-12345678-2","calle brasil","avellaneda",OCUPADO}};*/
-
-	ePedido listaPedido[TAM_PEDIDO]; /*= {{1,1,0,0,0,0,VACIO},
-			                          {2,1,0,0,0,0,VACIO},
-	                                  {3,2,0,0,0,0,VACIO}};*/
-
+	eCliente listaCliente[TAM_CLIENTE];
+	ePedido listaPedido[TAM_PEDIDO];
 	eLocalidad listaLocalidad[TAM_CLIENTE];
-
-	eAuxiliar auxiliar;
+    eAuxiliar auxiliar;
 
     setbuf(stdout, NULL);
 
-    tamArray = sizeof(cadenaAuxiliar);
     auxiliar = inicializarId(auxiliar);
 
     retorno = inicializarClientes(listaCliente, TAM_CLIENTE);
     mensajeEstado(retorno, "Inicializacion de clientes con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de clientes sin exito. \n");
 
     retorno = inicializarPedidos(listaPedido, TAM_PEDIDO);
-    mensajeEstado(retorno, "Inicializacion de pedidos con exito. \n\n", "Error, un proceso salio mal. \n\n", "Inicializacion de pedidos sin exito. \n\n");
-
-    retorno = inicializarLocalidad(listaLocalidad, TAM_CLIENTE);
-    mensajeEstado(retorno, "Inicializacion de localidades con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de localidades sin exito. \n");
+    mensajeEstado(retorno, "Inicializacion de pedidos con exito. \n", "Error, un proceso salio mal. \n", "Inicializacion de pedidos sin exito. \n");
 
     do
     {
     	menu();
-    	pedirEnteroValidado(cadenaAuxiliar, "Ingrese una opcion: \n\n", &opcion, tamArray);
+    	pedirEnteroValidado(cadenaAuxiliar, "Ingrese una opcion: \n\n", &opcion, TAM_CARACTER);
 
     	switch(opcion)
     	{
 
     	  case 1:
     	  auxiliar.idCliente++;
-    	  retorno = altaCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
+    	  retorno = altaCliente(listaCliente, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar, auxiliar.idCliente);
     	  mensajeEstado(retorno, "Alta con exito. \n", "Error, un proceso salio mal. \n", "Alta sin exito. \n");
     	  auxiliar.idCliente = verificarId(retorno, auxiliar.idCliente);
     	  break;
 
     	  case 2:
-    	  retorno = modificarCliente(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar);
+    	  retorno = modificarCliente(listaCliente, listaLocalidad, TAM_CLIENTE, cadenaAuxiliar);
     	  mensajeEstado(retorno, "Modificacion con exito. \n", "Error, un proceso salio mal. \n", "Modificacion sin exito. \n");
     	  break;
 
@@ -134,12 +132,12 @@ int main(void)
     	  break;
 
     	  case 5:
-    	  retorno = procesarResiduos(listaPedido, TAM_PEDIDO, listaCliente, TAM_CLIENTE);
+    	  retorno = procesarResiduos(listaPedido, TAM_PEDIDO);
     	  mensajeEstado(retorno, "Procesamiento con exito. \n", "Error, un proceso salio mal. \n", "Procesamiento sin exito. \n");
     	  break;
 
     	  case 6:
-    	  retorno = mostrarClientes(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE);
+    	  retorno = mostrarClientes(listaCliente, listaLocalidad, TAM_CLIENTE , listaPedido, TAM_PEDIDO);
     	  mensajeEstado(retorno, "listado con exito. \n", "Error, un proceso salio mal. \n", "listado sin exito. \n");
     	  break;
 
@@ -154,7 +152,7 @@ int main(void)
     	  break;
 
     	  case 9:
-    	  retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, TAM_CLIENTE, listaLocalidad, TAM_CLIENTE);
+    	  retorno = cantidadPedidosPendientesPorUnaLocalidad(listaCliente, listaLocalidad, TAM_CLIENTE, listaPedido, TAM_PEDIDO);
 		  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
@@ -164,17 +162,17 @@ int main(void)
     	  break;
 
     	  case 11:
-    	  retorno = pedidosPendiente(listaCliente, TAM_CLIENTE);
+    	  retorno = pedidosPendiente(listaCliente, TAM_CLIENTE, listaPedido, TAM_PEDIDO);
     	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 12:
-    	  retorno = pedidosCompletados(listaCliente, TAM_CLIENTE);
+    	  retorno = pedidosCompletados(listaCliente, TAM_CLIENTE, listaPedido, TAM_PEDIDO);
     	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 
     	  case 13:
-    	  retorno = pedidos(listaCliente, TAM_CLIENTE);
+    	  retorno = pedidosTotales(listaCliente, TAM_CLIENTE, listaPedido, TAM_PEDIDO);
     	  mensajeEstado(retorno, "Mensaje con exito. \n", "Error, un proceso salio mal. \n", "Mensaje sin exito. \n");
     	  break;
 

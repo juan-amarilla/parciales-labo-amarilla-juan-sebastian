@@ -14,6 +14,8 @@ typedef struct
 {
 	int id;
 	int idCliente;
+	int contadorPendiente;
+	int contadorProcesado;
 	float kilo;
 	float HDPE;
 	float LDPE;

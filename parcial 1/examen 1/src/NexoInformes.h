@@ -3,11 +3,15 @@
 #ifndef NEXOINFORMES_H_
 #define NEXOINFORMES_H_
 
-#include "Cliente.h"
-#include "Pedido.h"
+#include "Nexo.h"
 
-
-void mostrarCliente(eCliente unCliente, eLocalidad unaLocalidad);
+/// @fn void mostrarCliente(eCliente, eLocalidad, int)
+/// @brief su funcion es listar los clientes con la cantidad de pedidos pendientes
+///
+/// @param eCliente unCliente
+/// @param eLocalidad unaLocalidad
+/// @param int cantidadPendiente
+void mostrarCliente(eCliente unCliente, eLocalidad unaLocalidad, int cantidadPendiente);
 
 /// @fn void mostrarPedido(ePedido, eCliente)
 /// @brief su funcion es mostrar un pedido pendiente
@@ -15,13 +19,6 @@ void mostrarCliente(eCliente unCliente, eLocalidad unaLocalidad);
 /// @param ePedido unPedido
 /// @param eCliente unCliente
 void mostrarPedido(ePedido unPedido, eCliente unCliente);
-
-/// @fn void mostrarPedidoProcesado(ePedido, eCliente)
-/// @brief su funcion es mostrar un pedido procesado
-///
-/// @param ePedido unPedido
-/// @param eCliente unCliente
-void mostrarPedidoProcesado(ePedido unPedido, eCliente unCliente);
 
 /// @fn void mostrarCantidadPedidosPendientesPorUnaLocalidad(int, char[])
 /// @brief su funcion es mostrar los pedidos pendientes por dicha localidad

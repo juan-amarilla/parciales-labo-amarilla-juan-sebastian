@@ -2,18 +2,11 @@
 
 #include "Localidad.h"
 
-int inicializarLocalidad(eLocalidad listaLocalidad[], int tam)
+eLocalidad pedirUnaLocalidad(eLocalidad listaLocalidad, char cadena[])
 {
-	int i;
-	int retorno;
+	pedirLocalidad(cadena, "Ingrese localidad: \n", listaLocalidad.localidad, TAM_CARACTER);
+	mayusculasAutomaticos(listaLocalidad.localidad, TAM_CARACTER);
 
-	retorno = -1;
+	return listaLocalidad;
 
-	for(i=0;i<tam;i++)
-	{
-		listaLocalidad[i].isEmpty = VACIO;
-		retorno = 1;
-	}
-
-	return retorno;
 }

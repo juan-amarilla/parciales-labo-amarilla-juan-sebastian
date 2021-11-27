@@ -3,17 +3,21 @@
 #ifndef LOCALIDAD_H_
 #define LOCALIDAD_H_
 #define TAM_CARACTER 51
-#define VACIO 0
-#define OCUPADO 1
+#include "OtrasFunciones.h"
+#include "IngresarDatos.h"
 
 typedef struct
 {
-	int id;
 	char localidad[TAM_CARACTER];
-	int isEmpty;
 
 }eLocalidad;
 
-int inicializarLocalidad(eLocalidad listaLocalidad[], int tam);
+/// @fn eLocalidad pedirUnaLocalidad(eLocalidad, char[])
+/// @brief su funcion es pedir una localidad
+///
+/// @param eLocalidad listaLocalidad
+/// @param char cadena[]
+/// @return retorna el dato ingresado
+eLocalidad pedirUnaLocalidad(eLocalidad listaLocalidad, char cadena[]);
 
 #endif /* LOCALIDAD_H_ */

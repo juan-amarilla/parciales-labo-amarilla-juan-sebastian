@@ -12,6 +12,8 @@ int inicializarPedidos(ePedido listaPedido[], int tam)
 	for(i=0;i<tam;i++)
 	{
 		listaPedido[i].isEmpty = VACIO;
+		listaPedido[i].contadorPendiente = 0;
+		listaPedido[i].contadorProcesado = 0;
 		retorno = 1;
 	}
 

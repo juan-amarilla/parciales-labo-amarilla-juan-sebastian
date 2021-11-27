@@ -12,12 +12,30 @@ int inicializarClientes(eCliente listaCliente[], int tam)
 	for(i=0;i<tam;i++)
 	{
 		listaCliente[i].isEmpty = VACIO;
-		listaCliente[i].contadorPendiente = 0;
-		listaCliente[i].contadorProcesado = 0;
 		retorno = 1;
 	}
 
 	return retorno;
+}
+
+int verificarCliente(eCliente listaCliente[], int tam)
+{
+	int retorno;
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		if(i == 0)
+		{
+
+		}
+
+	}
+
+	retorno = -1;
+
+	return retorno;
+
 }
 
 void verificarCuit(char cadena[], eCliente listaCliente[])
@@ -57,60 +75,40 @@ void verificarNombre(char cadena[], eCliente listaCliente[])
 
 }
 
-int altaCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id)
-{
-	int retorno;
-	int i;
-
-	for(i=0;i<tamClien;i++)
-	{
-		retorno = altaClienteParte2(listaCliente[i], listaLocalidad, tamLocal, listaCliente, cadena, id);
-		break;
-
-	}
-
-	return retorno;
-}
-
-int altaClienteParte2(eCliente listaCliente, eLocalidad listaLocalidad[], int tamLocal, eCliente lista[], char cadena[], int id)
+int altaCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[], int id)
 {
 	int retorno;
 	int i;
 
 	retorno = -1;
 
-	for(i=0;i<tamLocal;i++)
+	for(i=0;i<tam;i++)
 	{
-		retorno = 0;
+        retorno = 0;
 
-		if(buscarLibre(listaCliente.isEmpty) != OCUPADO)
+		if(buscarLibre(listaCliente[i].isEmpty) != OCUPADO)
 		{
-			pedirCliente(listaCliente, listaLocalidad[i], cadena, id, lista);
+			listaCliente[i] = pedirCliente(listaCliente[i], cadena, id, listaCliente);
+			listaLocalidad[i] = pedirUnaLocalidad(listaLocalidad[i], cadena);
 			retorno = 1;
 			break;
 
 		}
-
 	}
 
 	return retorno;
-
 }
 
-eCliente pedirCliente(eCliente listaCliente, eLocalidad listaLocalidad, char cadena[], int id, eCliente lista[])
+eCliente pedirCliente(eCliente listaCliente, char cadena[], int id, eCliente lista[])
 {
 	listaCliente.id = id;
-	listaLocalidad.id = id;
-	pedirNombre(cadena, "Ingrese nombre: \n", listaCliente.nombre, TAM_CARACTER);
+    pedirNombre(cadena, "Ingrese nombre: \n", listaCliente.nombre, TAM_CARACTER);
 	mayusculasAutomaticos(listaCliente.nombre, TAM_CARACTER);
 	verificarNombre(listaCliente.nombre, lista);
-	pedirCuitValidado(cadena,"Ingrese cuit incluyendo los guiones: \n", listaCliente.cuit);
+    pedirCuitValidado(cadena,"Ingrese cuit incluyendo los guiones: \n", listaCliente.cuit);
 	verificarCuit(listaCliente.cuit, lista);
-	pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente.direccion, TAM_CARACTER);
-	pedirLocalidad(cadena, "Ingrese localidad: \n", listaLocalidad.localidad, TAM_CARACTER);
-	mayusculasAutomaticos(listaCliente.direccion, TAM_CARACTER);
-	mayusculasAutomaticos(listaLocalidad.localidad, TAM_CARACTER);
-	listaLocalidad.isEmpty = OCUPADO;
+    pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente.direccion, TAM_CARACTER);
+    mayusculasAutomaticos(listaCliente.direccion, TAM_CARACTER);
 	listaCliente.isEmpty = OCUPADO;
 
 	return listaCliente;
@@ -135,7 +133,7 @@ void imprimirMenuIdClienteEstructura(eCliente listaCliente[], int tam)
 
 }
 
-int modificarCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLocalidad[], int tamLocal, char cadena[])
+int modificarCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[])
 {
 	int retorno;
 	int seguro;
@@ -146,7 +144,7 @@ int modificarCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLoca
 
 	if(seguro == 1)
 	{
-		retorno = modificarUnDatoDeCliente(listaCliente, tamClien, listaLocalidad, tamLocal, cadena);
+		retorno = modificarUnDatoDeCliente(listaCliente, listaLocalidad, tam, cadena);
 
 	}
 
@@ -159,49 +157,57 @@ int modificarCliente(eCliente listaCliente[], int tamClien, eLocalidad listaLoca
 
 }
 
-int modificarUnDatoDeCliente(eCliente listaCliente[], int tam, eLocalidad listaLocalidad[], int tamLocal, char cadena[])
+int modificarUnDatoDeCliente(eCliente listaCliente[], eLocalidad listaLocalidad[], int tam, char cadena[])
 {
 	int i;
 	int retorno;
 	int id;
+	int opcion;
 
 	imprimirMenuIdClienteEstructura(listaCliente, tam);
 	pedirEnteroValidado(cadena, "Ingrese la id para la modificacion: \n", &id, TAM_CARACTER);
 
 	for(i=0;i<tam;i++)
 	{
-		retorno = modificarUnDatoDeClienteParte2(listaCliente[i], listaCliente, listaLocalidad, tamLocal, cadena, id);
-
-	}
-
-    return retorno;
-
-}
-
-int modificarUnDatoDeClienteParte2(eCliente listaCliente, eCliente lista[], eLocalidad listaLocalidad[], int tamLocal, char cadena[], int id)
-{
-	int i;
-	int retorno;
-	int opcion;
-
-	retorno = -1;
-
-	for(i=0;i<tamLocal;i++)
-	{
 		retorno = 0;
 
-		if(listaCliente.id == id && listaLocalidad[i].id == id && buscarLibre(listaCliente.isEmpty) != VACIO && buscarLibre(listaLocalidad[i].isEmpty) != VACIO)
+		if(listaCliente[i].id == id && buscarLibre(listaCliente[i].isEmpty) != VACIO)
 		{
 
 			retorno = -1;
+
 			do
 			{
-				printf("1-Modificar direccion. \n");
-				printf("2-Modificar localidad. \n");
-				printf("3-Salir. \n");
-				pedirEnteroValidado(cadena, "Ingrese una opcion: \n", &opcion, TAM_CARACTER);
+					printf("1-Modificar direccion. \n");
+					printf("2-Modificar localidad. \n");
+					printf("3-Salir. \n");
+					pedirEnteroValidado(cadena, "Ingrese una opcion: \n", &opcion, TAM_CARACTER);
 
-				retorno = opcionDeModificarCliente(opcion, cadena, lista, i, retorno, listaLocalidad[i]);
+					switch(opcion)
+					{
+						case 1:
+						pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente[i].direccion, TAM_CARACTER);
+						mayusculasAutomaticos(listaCliente[i].direccion, TAM_CARACTER);
+						retorno = 1;
+						break;
+
+						case 2:
+						pedirLocalidad(cadena, "Ingrese localidad: \n", listaLocalidad[i].localidad, TAM_CARACTER);
+						mayusculasAutomaticos(listaLocalidad[i].localidad, TAM_CARACTER);
+						retorno = 1;
+						break;
+
+						case 3:
+						printf("Saliste de manera exitosa. \n");
+						break;
+
+						default:
+						printf("La opcion debe ser uno de las 3 opciones. \n");
+					    break;
+
+					}
+
+					mensajeEstado(retorno, "Opcion exitosa. \n", "Error, algo salio mal. \n", "Opcion sin exito. \n");
 
 			} while (opcion != 3);
 
@@ -210,38 +216,7 @@ int modificarUnDatoDeClienteParte2(eCliente listaCliente, eCliente lista[], eLoc
 
 	}
 
-	return retorno;
-
-}
-
-
-int opcionDeModificarCliente(int opcion, char cadena[], eCliente listaCliente[], int i, int retorno, eLocalidad listaLocalidad)
-{
-	switch(opcion)
-	{
-		case 1:
-		pedirDireccion(cadena, "Ingrese direccion: \n", listaCliente[i].direccion, TAM_CARACTER);
-		mayusculasAutomaticos(listaCliente[i].direccion, TAM_CARACTER);
-		retorno = 1;
-		break;
-
-		case 2:
-		pedirLocalidad(cadena, "Ingrese localidad: \n", listaLocalidad.localidad, TAM_CARACTER);
-		mayusculasAutomaticos(listaLocalidad.localidad, TAM_CARACTER);
-		retorno = 1;
-		break;
-
-		case 3:
-		printf("Saliste de manera exitosa. \n");
-		break;
-
-		default:
-	    printf("La opcion debe ser uno de las 3 opciones. \n");
-        break;
-
-	}
-
-	return retorno;
+    return retorno;
 
 }
 
